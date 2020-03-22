@@ -1,0 +1,10 @@
+\\SERVER\adfs\
+\\SERVER\ghghn$\gbf
+
+
+\\12SERVER\adfs\
+\\SE-RVER\12ghghn$\gbf
+\\      SERVER1\bfgb12\vffd12\\
+\SERVER\adfs\
+q\\SERVER\ghghn$\gbf\\SERVER1\bfgb12\vffd12 \
+\\SERVE\R1\bfgb12\_vffd12\
