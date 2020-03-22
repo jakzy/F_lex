@@ -4,20 +4,19 @@ from ply.lex import TOKEN
 
 
 class Lexer(object):
+    # СПИСОК СОСТОЯНИЙ
     states = (
         ('server', 'exclusive'),
         ('tail', 'exclusive'),
     )
-
+    # СПИСОК ТОКЕНОВ
     tokens = (
         'DOUBLESLASH', 'ANY', 'NL', 'SERVER', 'DATA',
     )
 
     t_ANY = r'(.)'
 
-    # t(_state)_TOKENNAME = r''
-    # def ~
-
+    # ОПРЕДЕЛЕНИЕ ТОКЕНОВ
     def t_DOUBLESLASH(self, t):
         r'(?m)^\\\\'
         t.lexer.begin('server')
@@ -64,7 +63,7 @@ class Lexer(object):
     t_tail_ignore = ''
     t_ignore = ''
 
-    # ну и куда же мы без обработки ошибок
+    # ОБРАБОТКА ОШИБОК
     def t_server_error(self, t):
         print("Illegal character in SERVER '%s'" % t.value[0])
         # t.lexer.skip(1)
